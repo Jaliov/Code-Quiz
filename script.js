@@ -29,38 +29,45 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-
 var submitBtn = document.getElementById("submit")
 submitBtn.addEventListener("click", chooseFamily)
+
 
 var getFamily = document.querySelector("#ans")
 function chooseFamily() {
     console.log(getFamily)
     var userChoice = getFamily.value;
     console.log(userChoice)
-
-    if (userChoice.toLowerCase() === "string" || "Under the chin" || "Mellower") {
-        alert("correct")  
      
-    if (userChoice === true) {
-        $("#instruFamily").empty(); 
+    if (userChoice.toLowerCase() === "string" || userChoice.toLowerCase() === "larger" || userChoice.toLowerCase() === "Mellower") {
+         alert("correct");
+        
+       
     }
-    } else {
-        alert("wrong answer")
-    }  
-    
-     var elementrplce = document.querySelector("section")
-    
-    
+   else {
+     alert("wrong asnswer")
+   }
+   $("section").empty(); 
 
-elementrplce.innerHTML = "<h4>Compared in snbbbbbbjjkkkk<h4>";
-  "<li>ttler</li>" +
-  "<li>Larger</li>" +
-  "<li>Eqtl</li>" +
-"</ol>" +
-"</div >";
+function quest(question, answ1, answ2) {
+    this.question = question; 
+    this.answ1 = answ1; 
+    this.answ2= answ2; 
+    
+    return document.querySelector("section").innerHTML = question + answ1 + answ2;
+    
 }
+
+quest("<h4>The sound of a viola, compared to a violin is:<h4>", "<li>Mellower</li>", "<li>Louder</li>" )
+
+}
+    
 })
+
+
+
+
+
 
 
     
