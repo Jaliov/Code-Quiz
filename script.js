@@ -126,7 +126,6 @@ function chooseFamily() {
     } else {
         alert("incorrect")
         score === score + 0;
-
     }
 }
 
