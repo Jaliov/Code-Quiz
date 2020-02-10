@@ -8,7 +8,7 @@ var multiChoices = [
         answer: "1"
     },
     {  
-        question: "<h4>By what musical are the 4 strings of a viola tuned lower than a violin?:</h4><ol><li>Octave</li><li>third</li><li>fifth</li></ol><br><h5>",
+        question: "<h4>By what musical intetrval are the 4 strings of a viola tuned lower than a violin?</h4><ol><li>1 Octave</li><li>1 third</li><li>1 fifth</li></ol><br><h5>",
         answer: "3"
     },
     {
