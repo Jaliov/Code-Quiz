@@ -1,6 +1,6 @@
 var multiChoices = [
     {
-        question: "<h4>The viola is a member of which family of musical instruments?:</h4><ol><li>Brass</li><li>String</li><li>Woodwinds</li></ol>",
+        question: "<h4>The viola is a member of which family of musical instruments?</h4><ol><li>Brass</li><li>String</li><li>Woodwinds</li></ol>",
         answer: "2"
     },
     {
@@ -8,7 +8,7 @@ var multiChoices = [
         answer: "1"
     },
     {  
-        question: "<h4>By what musical intetrval are the 4 strings of a viola tuned lower than a violin?</h4><ol><li>1 Octave</li><li>1 third</li><li>1 fifth</li></ol><br><h5>",
+        question: "<h4>By what musical interval are the 4 strings of a viola tuned lower than a violin?</h4><ol><li>1 Octave</li><li>1 third</li><li>1 fifth</li></ol>",
         answer: "3"
     },
     {
@@ -16,8 +16,8 @@ var multiChoices = [
         answer: "1"
     },
     {
-        question: "<h4>The role the viola generally plays in the symphony orchestra is</h4><ol><li>Mostly accompaniment<li>Mostly melody</li><li>The bass line</li></ol>",
-        answer: "1"
+        question: "<h4>The role the viola generally plays in the symphony orchestra is</h4><ol><li>Mostly melody</li><li>Mostly accompaniment</li><li>The bass line</li></ol>",
+        answer: "2"
     },
     {
         question: "<h4>Perhaps the most famous work for solo viola, however, which is also symphonic, is entitled:</h4><ol><li><i>Finalandia</i><li>Afternoon of a Fawn</li><li><i>Harold in Italy</i></ol>",
@@ -36,21 +36,34 @@ var userChoice;
 
 var t = 60;
 
+var score = 0;
+
+function loadStart() { 
+    document.getElementById("testInit").innerHTML = "<h4 class='text-center'>Enter your Answer Here: <input type='number' id='ans' name='scoreRecord' min='1' max='3'></h4><button class='btn btn-warning btn-sm mx-auto' style='width: 200px;' id='submit'>Submit</button>"  
+    var submitBtn = document.getElementById("submit")
+    submitBtn.addEventListener('click', chooseFamily); 
+}
+
 function setTime() {
+
+    loadStart();
+    
+    startButton.innerHTML = "";
+    
    nextQuesArr.push(multiChoices[qIndex].question)
    quesSection.innerHTML = nextQuesArr;
    var timerInterval = setInterval(function () {
         t--;
         timeEl.textContent = t + " Test Started";
-        if (t === 0 || score === 6) {
+        if (t === 0 || qIndex === 6 || score === 6) {
             clearInterval(timerInterval);
             sendMessage();
             nextQuesArr = [""];
+            startButton.innerHTML = "Start Test";
         }
     }, 1000);
+   
 }
-
-var score = 0;
 
 function sendMessage() {
     timeEl.textContent = "Test Over!";
@@ -68,8 +81,7 @@ function sendMessage() {
             alert("Good Score! Congratulations!")
             alert("Your initials and score have been saved!")
         } else if (score < 4) {
-            alert("Perhaps you should study up on the viola")
-            alert("(It will make you a better person!)")
+            alert("Perhaps you should study up on the viola! (It will make you a better person!)")
             alert("Your initials and score have been saved!")
         }
     }
@@ -80,9 +92,6 @@ function cnsoleInitials() {
 }
 var initialBtn = document.getElementById("initialSubmit")
 initialBtn.addEventListener('click', cnsoleInitials)
-
-var submitBtn = document.getElementById("submit")
-submitBtn.addEventListener('click', chooseFamily);
  
 function chooseFamily() {
     console.log(submitAnsw) 
@@ -94,7 +103,7 @@ function chooseFamily() {
         alert("Correct!")
         scoreDisplay.innerHTML = "Score: " + parseInt(++score)
                        }
-        else{ alert("Incorrect");
+        else{alert("Incorrect");
         score = score
         t = t+5;}
         nextQuesArr.push(multiChoices[++qIndex].question)
