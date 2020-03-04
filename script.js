@@ -8,8 +8,8 @@ var multiChoices = [
         answer: "1"
     },
     {  
-        question: "<h4>By what musical interval are the 4 strings of a viola tuned lower than a violin?</h4><ol><li>1 Octave</li><li>1 third</li><li>1 fifth</li></ol>",
-        answer: "3"
+        question: "<h4>Compared to a violin, the 4 strings of a viola are tuned:</h4><ol><li>Higher than a violin</li><li>Lower than a violin</li><li>Lower than a cello</li></ol>",
+        answer: "2"
     },
     {
         question: "<h4>While played the viola is held under the chin like a violin:</h4><ol><li>true</li><li>false</li></ol>",
