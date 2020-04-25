@@ -11,7 +11,6 @@
 - Once answered, either correctly or not, a new question is loaded
 - A score appears at bottom 
 - A timer countsdowns from 60 seconds -- user has one minute to complete the quiz!
-- Once completed, page reloads
-
+- Once completed, quiz resets
 ## Created with HTML, CSS, JavaScript, Bootstrap
 
