@@ -13,5 +13,5 @@
 - A timer countsdowns from 60 seconds -- user has one minute to complete the quiz!
 - Once completed, page reloads
 
-## Created with HTML, CSS, javaScript, Bootstrap
+## Created with HTML, CSS, JavaScript, Bootstrap
 
