@@ -1,26 +1,26 @@
 var multiChoices = [
     {
-        question: "<h4>The viola is a member of which family of musical instruments?</h4><ol><li>Brass</li><li>String</li><li>Woodwinds</li></ol>",
+        question: "<h4 class = 'text-left'>The viola is a member of which family of musical instruments?</h4><ol class = 'text-left'><li>Brass</li><li>String</li><li>Woodwinds</li></ol>",
         answer: "2"
     },
     {
-        question: "<h4>The size of a viola, compared to a violin is a bit:</h4><ol><li>Larger</li><li>Smaller</li><li>Just the same</li></ol>",
+        question: "<h4 class = 'text-left'>The size of a viola, compared to a violin is a bit:</h4><ol class = 'text-left'><li>Larger</li><li>Smaller</li><li>Just the same</li></ol>",
         answer: "1"
     },
     {  
-        question: "<h4>Compared to a violin, the 4 strings of a viola are tuned:</h4><ol><li>Higher than a violin</li><li>Lower than a violin</li><li>Lower than a cello</li></ol>",
+        question: "<h4 class = 'text-left'>Compared to a violin, the 4 strings of a viola are tuned:</h4><ol class = 'text-left'><li>Higher than a violin</li><li>Lower than a violin</li><li>Lower than a cello</li><ol class = 'text-left'>",
         answer: "2"
     },
     {
-        question: "<h4>While played the viola is held under the chin like a violin:</h4><ol><li>true</li><li>false</li></ol>",
+        question: "<h4 class = 'text-left'>While played the viola is held under the chin like a violin:</h4><ol class = 'text-left'><li>true</li><li>false</li></ol>",
         answer: "1"
     },
     {
-        question: "<h4>The role the viola generally plays in the symphony orchestra is</h4><ol><li>Mostly melody</li><li>Mostly accompaniment</li><li>The bass line</li></ol>",
+        question: "<h4 class = 'text-left'>The role the viola generally plays in the symphony orchestra is</h4><ol class = 'text-left'><li>Mostly melody</li><li>Mostly accompaniment</li><li>The bass line</li></ol>",
         answer: "2"
     },
     {
-        question: "<h4>Perhaps the most famous work for solo viola, however, which is also symphonic, is entitled:</h4><ol><li><i>Finalandia</i><li>Afternoon of a Fawn</li><li><i>Harold in Italy</i></ol>",
+        question: "<h4 class = 'text-left'>Perhaps the most famous work for solo viola, however, which is also symphonic, is entitled:</h4><ol class = 'text-left'><li><i>Finalandia</i><li>Afternoon of a Fawn</li><li><i>Harold in Italy</i></ol>",
         answer: "3"
     }
 ]
@@ -39,7 +39,7 @@ var t = 60;
 var score = 0;
 
 function loadStart() { 
-    document.getElementById("testInit").innerHTML = "<h4 class='text-center'>Enter your Answer Here: <input type='number' id='ans' name='scoreRecord' min='1' max='3'></h4><button class='btn btn-warning btn-sm mx-auto' style='width: 200px;' id='submit'>Submit Answer</button>"  
+    document.getElementById("testInit").innerHTML = "<h5 class='text-center'>Enter your Answer Here: <input type='number' id='ans' name='scoreRecord' placeholder = 'num' min='1' max='3'></h5><button class='btn btn-warning btn-sm mx-auto' style='width: 200px;' id='submit'>Submit Answer</button>"  
     var submitBtn = document.getElementById("submit")
     submitBtn.addEventListener('click', chooseFamily); 
 }

@@ -1,15 +1,14 @@
 
-
+section {
+    width: 300px;
+}
  
+
   
   #jumboColor {
     /* background-image: linear-gradient(rgba(104, 93, 93, 0.5); */
     background-color: rgb(200, 93, 60);
   }
-  
-  /* h1 {
-    font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
-     font-weight: bold; */
   
   
   #buttonPlce {
@@ -31,7 +30,7 @@
     background-image: linear-gradient(rgba(104, 93, 93, 0.5), rgb(231, 88, 44));
   } 
    body {
-    background-image: url(violaImage.png);
+    /* background-image: url(violaImage.png); */
        background-image: linear-gradient(rgba(104, 93, 93, 0.5), rgb(200, 93, 60)); 
       background-repeat: no-repeat;
       background-size: 100%;
