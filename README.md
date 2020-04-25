@@ -1,7 +1,7 @@
 # Code-Quiz
 
 ### This little app is a timed quiz
-### The subject of this quiz is a musical instrument -- the viola!
+### The subject of this quiz is actually a musical instrument -- the viola!
 ### The viola is relatively unknown to most people hence this quiz
 
 ## Instructions
