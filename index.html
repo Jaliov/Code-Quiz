@@ -5,91 +5,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+   
   <title>Survey Form</title>
 </head>
-<style>
-  body {
-    background-image: linear-gradient(rgba(104, 93, 93, 0.5), rgb(200, 93, 60));
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    color: white;
-  }
 
-  h1 {
-
-    font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
-    font-weight: bold;
-  }
-
-  #buttonPlce {
-    padding: 20px;
-  }
-
-  .time {
-    font-weight: bold;
-  }
-
-  .timeEl {
-    color: white;
-  }
-
-  #intro {
-    background-color: rgb(236, 204, 161);
-    color: rgb(80, 36, 23);
-    text-align: center;
-    margin-top: 20px;
-    /*font-family: Palatino Linotype, Book Antiqua, Palatino, serif;*/
-    width: 500px;
-  }
-
-  .container {
-    background-image: linear-gradient(rgba(104, 93, 93, 0.5), rgb(231, 88, 44));
-  }
-</style>
 
 <body>
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 my-auto">
-        <p id="intro" class="mx-auto"><strong>Among the instruments of the symphony orchestra, the viola is one of the
-            least familiar.
-            Take the quiz below to find out what you know about this obscure but wonderful
-            instrument.</strong></p>
-
-        <h1 class="text-center">Test Your Knowledge of the Viola!</h1>
-        <h3 class="text-center time">
+    <div class="jumbotron" id = "jumboColor">
+   
+      <div class="col-sm-12 text-center">
+        <div class="alert alert-light justify-content-center" role="alert" id = "intro">
+          Among the instruments of the symphony orchestra, the viola is one of the least familiar. Take the quiz below to test your knowledge of this little known but wonderful instrument.
+        </div>
+      </div>
+        <h1 class="text-center text-light">Viola Quiz!</h1>
+        <h3 class="text-center time text-danger bg-light" id = "timerStyle">  
 
         </h3>
-
+         
         <div class="text-center timeEl">
           <div style="width: 250px;" class="mx-auto">
+        
             <section width=></section>
           </div>
           <div id="testInit"></div>
 
           <div class="text-center">
             <div id="buttonPlce">
+
+              <div class="form-row align-items-center justify-content-center">
               <input type="text" id="initials" placeholder="Enter your initals here">
-              <button class="btn btn-light btn-sm" id="initialSubmit">Submit Initials</button>
+              <button class="btn btn-light btn-sm" id="initialSubmit">Submit</button>
+            </div>
             </div>
             <div class="mx-auto" style="width: 160px;" id="srtBtn">
-              <button class="btn btn-danger btn-lg" id="start">Start Test!</button>
+              <button class="btn btn-danger btn-lg" id="start">Start</button>
+           
             </div>
           </div>
-
         </div>
       </div>
-
-      <h2 id="result"></h2>
-      <h2 id="result2"></h2>
+     
     </div>
+    <h2 id="result" class ="text-light text-center" style="padding-bottom: 10px;"></h2>
+    <h2 id="result2"></h2>
+    <!-- <button class='btn btn-light btn-sm' id='testAgain' onclick = location.reload(true/false)>Take Quiz Again!</button> -->
+  
   </div>
   </div>
 

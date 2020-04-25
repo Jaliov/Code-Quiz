@@ -39,7 +39,7 @@ var t = 60;
 var score = 0;
 
 function loadStart() { 
-    document.getElementById("testInit").innerHTML = "<h4 class='text-center'>Enter your Answer Here: <input type='number' id='ans' name='scoreRecord' min='1' max='3'></h4><button class='btn btn-warning btn-sm mx-auto' style='width: 200px;' id='submit'>Submit</button>"  
+    document.getElementById("testInit").innerHTML = "<h4 class='text-center'>Enter your Answer Here: <input type='number' id='ans' name='scoreRecord' min='1' max='3'></h4><button class='btn btn-warning btn-sm mx-auto' style='width: 200px;' id='submit'>Submit Answer</button>"  
     var submitBtn = document.getElementById("submit")
     submitBtn.addEventListener('click', chooseFamily); 
 }
@@ -54,16 +54,19 @@ function setTime() {
    quesSection.innerHTML = nextQuesArr;
    var timerInterval = setInterval(function () {
         t--;
-        timeEl.textContent = t + " Test Started";
-        if (t === 0 || qIndex === 6 || score === 6) {
+        timeEl.textContent = t + " Countdown";
+        if (t === 0 || qIndex === 6 || score === 6 || t < 0) {
             clearInterval(timerInterval);
             sendMessage();
-            nextQuesArr = [""];
-            startButton.innerHTML = "Start Test";
+            nextQuesArr = null;
+            setTimeout(quizRepeat, 3000)
         }
     }, 1000);
-   
 }
+
+quizRepeat = () => {
+    return location.reload(true/false)
+ }
 
 function sendMessage() {
     timeEl.textContent = "Test Over!";
@@ -111,7 +114,6 @@ function chooseFamily() {
         quesSection.innerHTML = nextQuesArr;
 }
  
-
 //Storage
 function initialStorage() {
     if (typeof (Storage) !== "undefined") {
