@@ -26,36 +26,41 @@ var multiChoices = [
 ]
 var qIndex = 0;
 var nextQuesArr = [];
-var initStorage = document.querySelector("#initials");
+var initStorage = document.querySelector("#initials")
 var quesSection = document.querySelector('section'); 
 var timeEl = document.querySelector(".time");
 var startButton = document.getElementById("start")
 startButton.addEventListener("click", setTime)
 var scoreDisplay =   document.getElementById("result");
+var initialsClear = document.getElementById("clearField")
 var userChoice;
+
 
 var t = 60;
 
 var score = 0;
 
 function loadStart() { 
-    document.getElementById("testInit").innerHTML = "<h5 class='text-center'>Enter your Answer Here: <input type='number' id='ans' name='scoreRecord' placeholder = 'num' min='1' max='3'></h5><button class='btn btn-warning btn-sm mx-auto' style='width: 200px;' id='submit'>Submit Answer</button>"  
+    event.preventDefault();
+    initialsClear.innerHTML = "";
+    document.getElementById("testInit").innerHTML = "<h5 class='text-center'>Answer Here: <input type='number' id='ans' name='scoreRecord' placeholder = '1,2,3' min='1' max='3'></h5><button class='btn btn-outline-light mx-auto' style='width: 100px;' id='submit'>Submit</button>"  
     var submitBtn = document.getElementById("submit")
     submitBtn.addEventListener('click', chooseFamily); 
+    
 }
 
 function setTime() {
-
+    
+    initialStorage();
     loadStart();
-    
     startButton.innerHTML = "";
-    
+    //initialsClear.innerHTML = "";
    nextQuesArr.push(multiChoices[qIndex].question)
    quesSection.innerHTML = nextQuesArr;
    var timerInterval = setInterval(function () {
         t--;
-        timeEl.textContent = t + " Countdown";
-        if (t === 0 || qIndex === 6 || score === 6 || t < 0) {
+        timeEl.textContent = t + " Timer";
+        if (t === 0 || qIndex === 5 || score === 6 || t < 0 ) {
             clearInterval(timerInterval);
             sendMessage();
             nextQuesArr = null;
@@ -70,8 +75,8 @@ quizRepeat = () => {
 
 function sendMessage() {
     timeEl.textContent = "Test Over!";
-    if ("Text Over") {
-        initialStorage();
+    if ("Test Over") {
+      
         scoreDisplay.innerHTML = "Score : " + score;
         quesSection.innerHTML = "";
         userChoice = "";
@@ -92,13 +97,13 @@ function sendMessage() {
 
 function cnsoleInitials() {
     console.log("initials : " + initStorage.value)
+  
 }
 var initialBtn = document.getElementById("initialSubmit")
 initialBtn.addEventListener('click', cnsoleInitials)
  
-function chooseFamily() {
+function chooseFamily() {  
     console.log(submitAnsw) 
-
     var submitAnsw = document.querySelector("#ans")
     userChoice = submitAnsw.value
 
@@ -117,10 +122,10 @@ function chooseFamily() {
 //Storage
 function initialStorage() {
     if (typeof (Storage) !== "undefined") {
-        console.log("initStorage :" + initStorage.innerHTML)
+        console.log("initStorage :" + initStorage.value)
         // Store
-        localStorage.setItem("PlayerIntials", initStorage.innerHTML = initials.value);
-        var getInits = localStorage.getItem("PlayerIntials")
+        localStorage.setItem("PlayerInitials", initStorage.value);
+        var getInits = localStorage.getItem("PlayerInitials")
     } else {
         document.getElementById("result2").innerHTML = "Sorry, your browser does not support Web Storage...";
     }

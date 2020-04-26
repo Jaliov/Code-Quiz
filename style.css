@@ -1,31 +1,42 @@
 
   #jumboColor {
-    background-color: rgb(200, 93, 60);
+    /* background-image: url(ViolaBackFoggy.jpg); */
+    background-color: rgb(200, 93, 60, 0.5);
+  }
+
+  #result {
+    margin-right: auto;
+    margin-left: auto;
   }
   
-  
+  #intro {
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+  }
   #buttonPlce {
     padding: 20px;
   }
-  
+
   .timeEl {
     color: white;
   }
 
   #timerStyle {
-      background-color: white;
-      width: 25%;
+      /* background-color: white; */
+      width: 15%;
       margin-left: auto;
       margin-right: auto; 
   }
   
  .container {
-    background-image: linear-gradient(rgba(104, 93, 93, 0.5), rgb(231, 88, 44));
+  background-image: url(ViolaBackFoggyOverlay.jpg);
+  height: 100%;
   } 
    body {
     /* background-image: url(violaImage.png); */
-       background-image: linear-gradient(rgba(104, 93, 93, 0.5), rgb(200, 93, 60)); 
-      background-repeat: no-repeat;
+     
+      background-repeat: no-repeat; 
       background-size: 100%;
       background-attachment: fixed;
       background-position: center;
