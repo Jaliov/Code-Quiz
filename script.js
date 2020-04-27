@@ -50,7 +50,6 @@ function loadStart() {
 }
 
 function setTime() {
-    
     initialStorage();
     loadStart();
     startButton.innerHTML = "";
@@ -60,7 +59,7 @@ function setTime() {
    var timerInterval = setInterval(function () {
         t--;
         timeEl.textContent = t + " Timer";
-        if (t === 0 || qIndex === 5 || score === 6 || t < 0 ) {
+        if (t === 0 || qIndex === 6 || score === 6 || t < 0 ) {
             clearInterval(timerInterval);
             sendMessage();
             nextQuesArr = null;
@@ -86,13 +85,19 @@ function sendMessage() {
         if (score === 6) {
             alert("Perfect Score! Congratulations!")
             alert("Your initials and score have been saved!")
+            $('#modal_correct').empty()
+            //$('#modal_incorrect').empty()
         } else if (score >= 4) {
             alert("Good Score! Congratulations!")
             alert("Your initials and score have been saved!")
-        } else if (score < 4) {
-            alert("Perhaps you should study up on the viola! (It will make you a better person!)")
+            $('#modal_correct').empty()
+            $('#modal_incorrect').empty()
+        } else if (score < 4 && score > 0)  {
+            setTimeout(alert("Perhaps you should study up on the viola! (It will make you a better person!)"), 2000)
             alert("Your initials and score have been saved!")
+            $('#modal_incorrect').empty()
         }
+        else {quizRepeat()}
     }
 }
 
