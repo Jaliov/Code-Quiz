@@ -1,4 +1,8 @@
-
+body {
+  background-color: rgb(200, 93, 60);
+}
+  
+  
   #jumboColor {
     /* background-image: url(ViolaBackFoggy.jpg); */
     background-color: rgb(200, 93, 60, 0.5);
@@ -33,14 +37,12 @@
   background-image: url(ViolaBackFoggyOverlay.jpg);
   height: 100%;
   } 
-   body {
-    /* background-image: url(violaImage.png); */
-     
+   /* body {
       background-repeat: no-repeat; 
       background-size: 100%;
       background-attachment: fixed;
       background-position: center;
-    }
+    } */
 
 
   

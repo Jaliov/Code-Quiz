@@ -24,6 +24,7 @@ var multiChoices = [
         answer: "3"
     }
 ]
+
 var qIndex = 0;
 var nextQuesArr = [];
 var initStorage = document.querySelector("#initials")
@@ -45,8 +46,7 @@ function loadStart() {
     initialsClear.innerHTML = "";
     document.getElementById("testInit").innerHTML = "<h5 class='text-center'>Answer Here: <input type='number' id='ans' name='scoreRecord' placeholder = '1,2,3' min='1' max='3'></h5><button class='btn btn-outline-light mx-auto' style='width: 100px;' id='submit'>Submit</button>"  
     var submitBtn = document.getElementById("submit")
-    submitBtn.addEventListener('click', chooseFamily); 
-    
+    submitBtn.addEventListener('click', chooseFamily);    
 }
 
 function setTime() {
@@ -72,6 +72,7 @@ function setTime() {
 quizRepeat = () => {
     return location.reload(true/false)
  }
+
 
 function sendMessage() {
     timeEl.textContent = "Test Over!";
@@ -108,12 +109,14 @@ function chooseFamily() {
     userChoice = submitAnsw.value
 
     if(userChoice === multiChoices[qIndex].answer) {
-        alert("Correct!")
+        //alert("Correct!")
+        $('#modal_correct').modal()
         scoreDisplay.innerHTML = "Score: " + parseInt(++score)
                        }
-        else{alert("Incorrect");
+        else{  $('#modal_incorrect').modal()
         score = score
         t = t+5;}
+        scoreDisplay.innerHTML = "Score: " + score;
         nextQuesArr.push(multiChoices[++qIndex].question)
         nextQuesArr.shift(multiChoices[qIndex].question)
         quesSection.innerHTML = nextQuesArr;
