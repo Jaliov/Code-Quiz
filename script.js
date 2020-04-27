@@ -83,19 +83,11 @@ function sendMessage() {
         console.log("score at close :" + score)
         storeScore(score);
         if (score === 6) {
-            alert("Perfect Score! Congratulations!")
-            alert("Your initials and score have been saved!")
-            $('#modal_correct').empty()
-            //$('#modal_incorrect').empty()
-        } else if (score >= 4) {
-            alert("Good Score! Congratulations!")
-            alert("Your initials and score have been saved!")
-            $('#modal_correct').empty()
-            $('#modal_incorrect').empty()
+            setTimeout(function() { alert("Perfect score, congratulations!"), alert("Your initials and score have been saved!"); }, 3000);
+        } else if (score >= 4) 
+        {   setTimeout(function() { alert("Good score, congratulations!"), alert("Your initials and score have been saved!"); }, 3000);          
         } else if (score < 4 && score > 0)  {
-            setTimeout(alert("Perhaps you should study up on the viola! (It will make you a better person!)"), 2000)
-            alert("Your initials and score have been saved!")
-            $('#modal_incorrect').empty()
+            setTimeout(function() { alert("Perhaps you should study up on the viola! (It will make you a better person!)"), alert("Your initials and score have been saved!"); }, 3000)      
         }
         else {quizRepeat()}
     }
