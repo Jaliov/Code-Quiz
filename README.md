@@ -4,7 +4,7 @@
 
 ### This little app is a timed quiz.
 ### The subject of this quiz is a musical instrument -- the viola!
-### The viola seems relatively unknown to most people hence this quiz.
+### The viola is unfamiliar to most people hence this quiz.
 
 ## Instructions
 - The user first enters his/her initials which are stored in local storage
