@@ -1,7 +1,6 @@
 body {
   background-color: rgb(200, 93, 60);
-}
-  
+} 
   
   #jumboColor {
     /* background-image: url(ViolaBackFoggy.jpg); */
@@ -37,6 +36,8 @@ body {
   background-image: url(ViolaBackFoggyOverlay.jpg);
   height: 100%;
   } 
+
+
    /* body {
       background-repeat: no-repeat; 
       background-size: 100%;

@@ -100,6 +100,7 @@ function cnsoleInitials() {
 var initialBtn = document.getElementById("initialSubmit")
 initialBtn.addEventListener('click', cnsoleInitials)
  
+//Load questions
 function chooseFamily() {  
     console.log(submitAnsw) 
     var submitAnsw = document.querySelector("#ans")
