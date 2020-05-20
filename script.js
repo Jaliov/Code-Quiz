@@ -43,7 +43,6 @@ var initialsClear = document.getElementById('clearField');
 var userChoice;
 
 var t = 60;
-
 var score = 0;
 
 function loadStart() {
@@ -110,7 +109,7 @@ function sendMessage() {
 
 function cnsoleInitials() {
   initStorage.value.length > 3 ||
-  initStorage.value.length === 0 ||
+  initStorage.value == '' ||
   isNaN(parseInt(initStorage.value)) == false
     ? alert('Please enter your intials.') + (initStorage.value = ' ')
     : alert('initials recorded');
