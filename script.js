@@ -16,7 +16,7 @@ var multiChoices = [
   },
   {
     question:
-      "<h4 class = 'text-left'>While played the viola is held under the chin like a violin:</h4><ol class = 'text-left'><li>true</li><li>false</li></ol>",
+      "<h4 class = 'text-left'>While played the viola is held under the chin like a violin:</h4><ol class = 'text-left'><li>true</li><li>false</li><li>Neither</li></ol>",
     answer: '1',
   },
   {
@@ -26,7 +26,7 @@ var multiChoices = [
   },
   {
     question:
-      "<h4 class = 'text-left'>Perhaps the most famous work for solo viola, however, which is also symphonic, is entitled:</h4><ol class = 'text-left'><li><i>Finalandia</i><li>Afternoon of a Fawn</li><li><i>Harold in Italy</i></ol>",
+      "<h4 class = 'text-left'>Perhaps the most famous work for solo viola is entitled:</h4><ol class = 'text-left'><li><i>Finalandia</i><li>Afternoon of a Fawn</li><li><i>Harold in Italy</i></ol>",
     answer: '3',
   },
 ];
@@ -56,7 +56,6 @@ function loadStart() {
 }
 
 function setTime() {
-  //initialStorage();
   loadStart();
   startButton.innerHTML = '';
   //initialsClear.innerHTML = "";
@@ -110,7 +109,12 @@ function sendMessage() {
 }
 
 function cnsoleInitials() {
-  console.log('initials : ' + initStorage.value);
+  initStorage.value.length > 3 ||
+  initStorage.value.length === 0 ||
+  isNaN(parseInt(initStorage.value)) == false
+    ? alert('Please enter your intials.') + (initStorage.value = ' ')
+    : alert('initials recorded');
+  console.log('initials : ' + typeof initStorage.value);
 }
 var initialBtn = document.getElementById('initialSubmit');
 initialBtn.addEventListener('click', cnsoleInitials);
