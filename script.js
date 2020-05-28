@@ -140,7 +140,7 @@ function chooseFamily() {
 //Storage
 const initialStorage = () => {
   const quizStats = {
-    PlayerInitials: initStorage.value,
+    constPlayerInitials: initStorage.value,
     finalScore: score,
   };
   typeof Storage !== 'undefined'
