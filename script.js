@@ -6,7 +6,7 @@ var multiChoices = [
   },
   {
     question:
-      "<h4 class = 'text-left'>The size of a viola, compared to a violin is a bit:</h4><ol class = 'text-left'><li>Larger</li><li>Smaller</li><li>Just the same</li></ol>",
+      "<h4 class = 'text-left'>The size of a viola, compared to a violin is usually a bit:</h4><ol class = 'text-left'><li>Larger</li><li>Smaller</li><li>Just the same</li></ol>",
     answer: '1',
   },
   {
@@ -16,17 +16,17 @@ var multiChoices = [
   },
   {
     question:
-      "<h4 class = 'text-left'>While played the viola is held under the chin like a violin:</h4><ol class = 'text-left'><li>true</li><li>false</li><li>Neither</li></ol>",
+      "<h4 class = 'text-left'>The viola when played is held under the chin like a violin:</h4><ol class = 'text-left'><li>true</li><li>false</li><li>Neither</li></ol>",
     answer: '1',
   },
   {
     question:
-      "<h4 class = 'text-left'>The role the viola generally plays in the symphony orchestra is</h4><ol class = 'text-left'><li>Mostly melody</li><li>Mostly accompaniment</li><li>The bass line</li></ol>",
+      "<h4 class = 'text-left'>Generally speaking, the role of the viola in the symphony orchestra is</h4><ol class = 'text-left'><li>Mostly melody</li><li>Mostly accompaniment</li><li>The bass line</li></ol>",
     answer: '2',
   },
   {
     question:
-      "<h4 class = 'text-left'>Perhaps the most famous work for solo viola is entitled:</h4><ol class = 'text-left'><li><i>Finalandia</i><li>Afternoon of a Fawn</li><li><i>Harold in Italy</i></ol>",
+      "<h4 class = 'text-left'>Perhaps the most famous work for solo viola is entitled:</h4><ol class = 'text-left'><li><em>Finalandia</em></li><li><em>Afternoon of a Fawn</em></li><li><em>Harold in Italy</em></li></ol>",
     answer: '3',
   },
 ];
