@@ -112,7 +112,7 @@ function cnsoleInitials() {
   initStorage.value == '' ||
   isNaN(parseInt(initStorage.value)) == false
     ? alert('Please enter your intials.') + (initStorage.value = ' ')
-    : alert('initials recorded');
+    : alert('Now press start!');
   console.log('initials : ' + typeof initStorage.value);
 }
 var initialBtn = document.getElementById('initialSubmit');
@@ -140,7 +140,7 @@ function chooseFamily() {
 //Storage
 const initialStorage = () => {
   const quizStats = {
-    constPlayerInitials: initStorage.value,
+    PlayerInitials: initStorage.value,
     finalScore: score,
   };
   typeof Storage !== 'undefined'
@@ -158,6 +158,6 @@ const initialStorage = () => {
     localStorage.setItem(key, JSON.stringify(RetrievedInput));
     console.log(localStorage.getItem(key));
   };
-  AppendValueToStorage('PlayerInitials', quizStats);
+  AppendValueToStorage('Results', quizStats);
   //   document.forms[0].reset();
 };
