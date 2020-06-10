@@ -56,10 +56,12 @@ function loadStart() {
 
 function setTime() {
   loadStart();
+  $('#intro').empty();
   startButton.innerHTML = '';
   //initialsClear.innerHTML = "";
   nextQuesArr.push(multiChoices[qIndex].question);
   quesSection.innerHTML = nextQuesArr;
+
   var timerInterval = setInterval(function () {
     t--;
     timeEl.textContent = t + ' Timer';
@@ -124,9 +126,12 @@ function chooseFamily() {
   userChoice = submitAnsw.value;
   if (userChoice === multiChoices[qIndex].answer) {
     //alert("Correct!")
+    $('input').val('');
     $('#modal_correct').modal();
+    userChoice = null;
     scoreDisplay.innerHTML = 'Score: ' + parseInt(++score);
   } else {
+    $('input').val('');
     $('#modal_incorrect').modal();
     score = score;
     t = t + 5;
@@ -141,6 +146,7 @@ function chooseFamily() {
 const initialStorage = () => {
   const quizStats = {
     PlayerInitials: initStorage.value,
+
     finalScore: score,
   };
   typeof Storage !== 'undefined'
