@@ -126,9 +126,8 @@ function chooseFamily() {
   userChoice = submitAnsw.value;
   if (userChoice === multiChoices[qIndex].answer) {
     //alert("Correct!")
-    $('input').val('');
     $('#modal_correct').modal();
-    userChoice = null;
+    $('input').val('');
     scoreDisplay.innerHTML = 'Score: ' + parseInt(++score);
   } else {
     $('input').val('');
@@ -162,8 +161,10 @@ const initialStorage = () => {
 
     RetrievedInput.push(value);
     localStorage.setItem(key, JSON.stringify(RetrievedInput));
+
     console.log(localStorage.getItem(key));
   };
   AppendValueToStorage('Results', quizStats);
+
   //   document.forms[0].reset();
 };
